@@ -35,3 +35,10 @@ ExinEarn 水龙头是一个创新的购物返利平台，让用户在淘宝、�
 ```bash
 git clone https://github.com/your-username/exinearn-website.git
 cd exinearn-website
+```
+
+## 上线
+
+- npm run build
+- 会自动使用 out 目录自动上线
+- Let's Encrypt
