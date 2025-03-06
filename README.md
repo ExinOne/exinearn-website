@@ -40,5 +40,5 @@ cd exinearn-website
 ## 上线
 
 - npm run build
-- 会自动使用 out 目录自动上线
+- 会自动使用 out 目录自动上线(每五分钟)
 - Let's Encrypt
