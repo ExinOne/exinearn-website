@@ -66,14 +66,203 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="mx-auto lg:mr-0">
-                <Image
-                  alt="ExinEarn App Screenshot"
-                  className="rounded-xl object-cover shadow-xl"
-                  height={500}
-                  src="/placeholder.svg?height=500&width=400"
-                  width={400}
-                />
+              <div className="mx-auto lg:mr-0 relative">
+                <div className="absolute -top-6 -left-6 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center text-primary animate-pulse">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-badge-percent"
+                  >
+                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                    <path d="m15 9-6 6" />
+                    <path d="M9 9h.01" />
+                    <path d="M15 15h.01" />
+                  </svg>
+                </div>
+                <div
+                  className="absolute -bottom-6 -right-6 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-primary animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-gift"
+                  >
+                    <polyline points="20 12 20 22 4 22 4 12" />
+                    <rect width="20" height="5" x="2" y="7" />
+                    <line x1="12" x2="12" y1="22" y2="7" />
+                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                  </svg>
+                </div>
+                <div className="relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-xl p-8 w-[400px] h-[500px] flex flex-col">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-shopping-bag"
+                      >
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <path d="M3 6h18" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                      </svg>
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="font-bold text-lg">购物流程</h3>
+                      <p className="text-sm text-muted-foreground">通过 ExinEarn 获得奖励</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 flex-1">
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                        1
+                      </div>
+                      <div>
+                        <p className="font-medium">通过 ExinEarn 进入购物平台</p>
+                        <div className="flex mt-2 space-x-2">
+                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-primary"
+                            >
+                              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                              <path d="M3 6h18" />
+                              <path d="M16 10a4 4 0 0 1-8 0" />
+                            </svg>
+                          </div>
+                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-primary"
+                            >
+                              <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
+                              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                              <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
+                              <path d="M2 7h20" />
+                            </svg>
+                          </div>
+                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-primary"
+                            >
+                              <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                        2
+                      </div>
+                      <div>
+                        <p className="font-medium">正常购物，价格完全相同</p>
+                        <div className="flex mt-2">
+                          <div className="text-sm bg-green-50 text-green-600 px-2 py-1 rounded">¥ 原价购买</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                        3
+                      </div>
+                      <div>
+                        <p className="font-medium">获得额外奖励</p>
+                        <div className="flex mt-2 items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="text-yellow-500 mr-1"
+                          >
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                          </svg>
+                          <div className="text-sm bg-orange-50 text-primary px-2 py-1 rounded">+ 奖励金</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 bg-primary/10 p-3 rounded-lg">
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="text-sm font-medium">累计奖励</p>
+                        <p className="text-2xl font-bold text-primary">¥ 8,659.25</p>
+                      </div>
+                      <div className="bg-primary text-white p-2 rounded-full">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -215,111 +404,242 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4 mt-12">
+              {/* 淘宝 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://img.alicdn.com/imgextra/i4/O1CN01EYFcn61UlbR7LMYyW_!!6000000002557-2-tps-160-160.png"
-                    alt="淘宝"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#FF4400] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path
+                        d="M168.229 113.373h687.542c30.297 0 54.857 24.56 54.857 54.857v687.542c0 30.297-24.56 54.857-54.857 54.857H168.229c-30.297 0-54.857-24.56-54.857-54.857V168.23c0-30.297 24.56-54.857 54.857-54.857z"
+                        fill="#FF4400"
+                      ></path>
+                      <path
+                        d="M722.631 624.394c-28.297 7.5-59.643 14.357-93.643 20.357 22.714 39.214 41.357 83.357 52.5 133.5h-98.357c-8.357-30.857-21.857-61.714-39.857-91.714-39.857 4.5-82.5 7.5-126.857 8.357-74.357 1.5-142.5-2.143-182.357-5.357-61.714-5.357-69.214-33.643-53.357-59.143 15.857-25.5 31.714-41.357 61.714-36 30 5.357 96.214 15.857 178.5 15.857 41.357 0 81.214-2.143 117.857-5.357-28.297-30.857-60.857-60-96.214-85.5h-246.214v-45h142.5v-59.143h-114.214v-45h114.214v-85.5c-11.357 1.5-23.357 2.143-36 2.143h-78.214v-45h78.214c46.5 0 78.214-15.857 96.214-59.143h75.857c-7.5 15.857-15.857 30-25.5 42.857 30 15.857 69.214 15.857 114.214 15.857h96.214v45h-88.714c-8.357 0-17.357 0-26.357-0.643v83.357h133.5v45h-133.5v59.143h114.214v45h-204.214c25.5 17.357 49.5 36 71.357 56.357 30.857-4.5 60-9.643 85.5-15.857 25.5-6.214 57.857-15.857 78.214-24.214l15.857 42.857z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">淘宝</h3>
               </div>
+
+              {/* 京东 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://storage.360buyimg.com/tjall/jfs/t1/97221/35/34747/6471/63e4823fF67dcf59e/99a95a057fce1958.png"
-                    alt="京东"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path
+                        d="M851.366 959.944H172.634c-59.94 0-108.578-48.638-108.578-108.578V172.634c0-59.94 48.638-108.578 108.578-108.578h678.732c59.94 0 108.578 48.638 108.578 108.578v678.732c0 59.94-48.638 108.578-108.578 108.578z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M851.366 959.944H172.634c-59.94 0-108.578-48.638-108.578-108.578V172.634c0-59.94 48.638-108.578 108.578-108.578h678.732c59.94 0 108.578 48.638 108.578 108.578v678.732c0 59.94-48.638 108.578-108.578 108.578z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M622.742 541.526c0 16.396-13.116 29.512-29.512 29.512h-59.024v59.024c0 16.396-13.116 29.512-29.512 29.512s-29.512-13.116-29.512-29.512v-59.024h-59.024c-16.396 0-29.512-13.116-29.512-29.512s13.116-29.512 29.512-29.512h59.024v-59.024c0-16.396 13.116-29.512 29.512-29.512s29.512 13.116 29.512 29.512v59.024h59.024c16.396 0 29.512 13.116 29.512 29.512z"
+                        fill="#F10215"
+                      ></path>
+                      <path
+                        d="M504.694 304.77c-81.98 0-147.56 65.58-147.56 147.56v88.536h295.12V452.33c0-81.98-65.58-147.56-147.56-147.56z m0 0c-81.98 0-147.56 65.58-147.56 147.56v88.536h295.12V452.33c0-81.98-65.58-147.56-147.56-147.56z"
+                        fill="#F10215"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">京东</h3>
               </div>
+
+              {/* 拼多多 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://cdn.pinduoduo.com/assets/favicon-2d27d1d4.ico"
-                    alt="拼多多"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#E22E1F] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#E22E1F"></path>
+                      <path
+                        d="M671.36 305.344c-0.448-12.032-10.24-21.376-22.272-21.376h-274.56c-12.032 0-21.824 9.344-22.272 21.376l-9.344 249.088c-0.448 12.48 9.344 22.72 21.824 22.72h294.144c12.48 0 22.272-10.24 21.824-22.72l-9.344-249.088z m-159.744 227.264c-45.056 0-81.408-36.352-81.408-81.408 0-45.056 36.352-81.408 81.408-81.408 45.056 0 81.408 36.352 81.408 81.408 0 45.056-36.352 81.408-81.408 81.408z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 451.2m-40.96 0a40.96 40.96 0 1 0 81.92 0 40.96 40.96 0 1 0-81.92 0Z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 693.248c-45.056 0-81.408-36.352-81.408-81.408v-40.96h162.816v40.96c0 45.056-36.352 81.408-81.408 81.408z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">拼多多</h3>
               </div>
+
+              {/* 天猫 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://img.alicdn.com/imgextra/i3/O1CN01YbDKnC1vl2ue5KFnV_!!6000000006211-2-tps-160-160.png"
-                    alt="天猫"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#FF0036] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#FF0036"></path>
+                      <path
+                        d="M726.528 629.76c-12.288 4.096-25.088 6.656-38.4 7.68-13.312 1.024-26.624 1.536-39.936 1.536-13.312 0-26.624-0.512-39.936-1.536-13.312-1.024-26.112-3.584-38.4-7.68v-48.64c12.288 8.704 25.088 15.36 38.4 20.48 13.312 4.608 26.624 7.168 39.936 7.168 13.312 0 26.624-2.56 39.936-7.168 13.312-5.12 26.112-11.776 38.4-20.48v48.64zM648.192 335.872c-30.72 0-58.88 5.632-84.48 16.896-25.6 11.264-47.616 26.624-66.048 46.08-18.432 19.456-32.768 41.984-42.496 67.584-9.728 25.6-14.848 52.736-14.848 81.92 0 29.184 4.608 56.32 14.336 81.92 9.216 25.6 23.04 48.128 41.472 67.584 18.432 19.456 40.448 34.816 66.048 46.08 25.6 11.264 53.76 16.896 84.48 16.896 30.72 0 58.88-5.632 84.48-16.896 25.6-11.264 47.616-26.624 66.048-46.08 18.432-19.456 32.768-41.984 42.496-67.584 9.728-25.6 14.848-52.736 14.848-81.92 0-29.184-4.608-56.32-14.336-81.92-9.216-25.6-23.04-48.128-41.472-67.584-18.432-19.456-40.448-34.816-66.048-46.08-25.6-11.264-54.272-16.896-84.992-16.896z m-273.92 0c-30.72 0-58.88 5.632-84.48 16.896-25.6 11.264-47.616 26.624-66.048 46.08-18.432 19.456-32.768 41.984-42.496 67.584-9.728 25.6-14.848 52.736-14.848 81.92 0 29.184 4.608 56.32 14.336 81.92 9.216 25.6 23.04 48.128 41.472 67.584 18.432 19.456 40.448 34.816 66.048 46.08 25.6 11.264 53.76 16.896 84.48 16.896 30.72 0 58.88-5.632 84.48-16.896 25.6-11.264 47.616-26.624 66.048-46.08 18.432-19.456 32.768-41.984 42.496-67.584 9.728-25.6 14.848-52.736 14.848-81.92 0-29.184-4.608-56.32-14.336-81.92-9.216-25.6-23.04-48.128-41.472-67.584-18.432-19.456-40.448-34.816-66.048-46.08-25.6-11.264-54.272-16.896-84.992-16.896z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">天猫</h3>
               </div>
+
+              {/* 喜茶 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://www.heytea.com/storage/product/2020/05/27/0c88e67d69ac4b66b1a2d3b4c5e3f13f.jpg"
-                    alt="喜茶"
-                    width={80}
-                    height={80}
-                    className="mx-auto rounded-lg"
-                  />
+                  <div className="w-20 h-20 bg-[#1A1A1A] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#1A1A1A"></path>
+                      <path
+                        d="M512 286.72c-124.416 0-225.28 100.864-225.28 225.28S387.584 737.28 512 737.28 737.28 636.416 737.28 512 636.416 286.72 512 286.72z m0 389.12c-90.112 0-163.84-73.728-163.84-163.84S421.888 348.16 512 348.16 675.84 421.888 675.84 512 602.112 675.84 512 675.84z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 409.6c-56.32 0-102.4 46.08-102.4 102.4s46.08 102.4 102.4 102.4 102.4-46.08 102.4-102.4-46.08-102.4-102.4-102.4z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">喜茶</h3>
               </div>
+
+              {/* 星巴克 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://www.starbucks.com.cn/assets/icons/icon-384x384.png"
-                    alt="星巴克"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#00704A] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#00704A"></path>
+                      <path
+                        d="M512 286.72c-124.416 0-225.28 100.864-225.28 225.28S387.584 737.28 512 737.28 737.28 636.416 737.28 512 636.416 286.72 512 286.72z m0 389.12c-90.112 0-163.84-73.728-163.84-163.84S421.888 348.16 512 348.16 675.84 421.888 675.84 512 602.112 675.84 512 675.84z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 409.6m-102.4 0a102.4 102.4 0 1 0 204.8 0 102.4 102.4 0 1 0-204.8 0Z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">星巴克</h3>
               </div>
+
+              {/* 瑞幸 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://www.luckincoffee.com/assets/images/icon-512x512.png"
-                    alt="瑞幸"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#0F1E36] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#0F1E36"></path>
+                      <path
+                        d="M512 307.2c-113.152 0-204.8 91.648-204.8 204.8s91.648 204.8 204.8 204.8 204.8-91.648 204.8-204.8-91.648-204.8-204.8-204.8z m0 358.4c-84.992 0-153.6-68.608-153.6-153.6s68.608-153.6 153.6-153.6 153.6 68.608 153.6 153.6-68.608 153.6-153.6 153.6z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 409.6c-56.32 0-102.4 46.08-102.4 102.4s46.08 102.4 102.4 102.4 102.4-46.08 102.4-102.4-46.08-102.4-102.4-102.4z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">瑞幸</h3>
               </div>
+
+              {/* 饿了么 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://gw.alicdn.com/tfs/TB1tuPlaQ9l0K4jSZFKXXXFjpXa-195-195.png"
-                    alt="饿了么"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#0095FF] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#0095FF"></path>
+                      <path
+                        d="M512 307.2c-113.152 0-204.8 91.648-204.8 204.8s91.648 204.8 204.8 204.8 204.8-91.648 204.8-204.8-91.648-204.8-204.8-204.8z m0 358.4c-84.992 0-153.6-68.608-153.6-153.6s68.608-153.6 153.6-153.6 153.6 68.608 153.6 153.6-68.608 153.6-153.6 153.6z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        d="M512 409.6c-56.32 0-102.4 46.08-102.4 102.4s46.08 102.4 102.4 102.4 102.4-46.08 102.4-102.4-46.08-102.4-102.4-102.4z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">饿了么</h3>
               </div>
+
+              {/* 美团 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <Image
-                    src="https://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:d868c1f6/touch/img/logo.png"
-                    alt="美团"
-                    width={80}
-                    height={80}
-                    className="mx-auto"
-                  />
+                  <div className="w-20 h-20 bg-[#FFD100] rounded-lg flex items-center justify-center mx-auto">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                    >
+                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#FFD100"></path>
+                      <path
+                        d="M512 307.2c-113.152 0-204.8 91.648-204.8 204.8s91.648 204.8 204.8 204.8 204.8-91.648 204.8-204.8-91.648-204.8-204.8-204.8z m0 358.4c-84.992 0-153.6-68.608-153.6-153.6s68.608-153.6 153.6-153.6 153.6 68.608 153.6 153.6-68.608 153.6-153.6 153.6z"
+                        fill="#2E2E2E"
+                      ></path>
+                      <path
+                        d="M512 409.6c-56.32 0-102.4 46.08-102.4 102.4s46.08 102.4 102.4 102.4 102.4-46.08 102.4-102.4-46.08-102.4-102.4-102.4z"
+                        fill="#2E2E2E"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold">美团</h3>
               </div>
@@ -361,17 +681,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <Image
-                    alt="User"
-                    className="rounded-full"
-                    height={40}
-                    src="/placeholder.svg?height=40&width=40"
-                    style={{
-                      aspectRatio: "40/40",
-                      objectFit: "cover",
-                    }}
-                    width={40}
-                  />
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    <span className="text-primary font-bold">张</span>
+                  </div>
                   <div>
                     <p className="text-sm font-medium">张小姐</p>
                     <p className="text-xs text-muted-foreground">上海 | 使用5年</p>
@@ -400,17 +712,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <Image
-                    alt="User"
-                    className="rounded-full"
-                    height={40}
-                    src="/placeholder.svg?height=40&width=40"
-                    style={{
-                      aspectRatio: "40/40",
-                      objectFit: "cover",
-                    }}
-                    width={40}
-                  />
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    <span className="text-primary font-bold">李</span>
+                  </div>
                   <div>
                     <p className="text-sm font-medium">李先生</p>
                     <p className="text-xs text-muted-foreground">北京 | 使用4年</p>
@@ -439,17 +743,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <Image
-                    alt="User"
-                    className="rounded-full"
-                    height={40}
-                    src="/placeholder.svg?height=40&width=40"
-                    style={{
-                      aspectRatio: "40/40",
-                      objectFit: "cover",
-                    }}
-                    width={40}
-                  />
+                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                    <span className="text-primary font-bold">王</span>
+                  </div>
                   <div>
                     <p className="text-sm font-medium">王女士</p>
                     <p className="text-xs text-muted-foreground">广州 | 使用3年</p>
