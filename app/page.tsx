@@ -1,10 +1,7 @@
-import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ShoppingCart, BarChart, Gift, Award, TrendingUp } from "lucide-react"
+import Link from "next/link"
 
-import { Button } from "@/components/ui/button"
-
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -34,16 +31,17 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:flex">
+            <button className="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 hidden md:flex">
               登录
-            </Button>
-            <Button>立即注册</Button>
+            </button>
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+              立即注册
+            </button>
           </div>
         </div>
       </header>
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-orange-50 to-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-[#FFCC00]/10 to-white">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-20 items-center max-w-6xl mx-auto">
               <div className="flex flex-col justify-center space-y-4 px-0 md:px-6">
@@ -58,16 +56,31 @@ export default function Home() {
                   水龙头获得额外奖励，不改变购物习惯，轻松累积可观收益。
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="gap-1">
-                    立即开始 <ArrowRight className="h-4 w-4" />
-                  </Button>
-                  <Button size="lg" variant="outline">
+                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-orange text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 gap-1">
+                    立即开始
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-arrow-right h-4 w-4"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </button>
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8">
                     了解更多
-                  </Button>
+                  </button>
                 </div>
               </div>
               <div className="mx-auto lg:mx-0 relative px-0 md:px-6">
-                <div className="absolute -top-6 -left-6 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center text-primary animate-pulse">
+                <div className="absolute -top-6 -left-6 w-20 h-20 bg-[#FFCC00]/20 rounded-full flex items-center justify-center text-primary animate-pulse">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -80,14 +93,14 @@ export default function Home() {
                     strokeLinejoin="round"
                     className="lucide lucide-badge-percent"
                   >
-                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                    <path d="m15 9-6 6" />
-                    <path d="M9 9h.01" />
-                    <path d="M15 15h.01" />
+                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                    <path d="m15 9-6 6"></path>
+                    <path d="M9 9h.01"></path>
+                    <path d="M15 15h.01"></path>
                   </svg>
                 </div>
                 <div
-                  className="absolute -bottom-6 -right-6 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-primary animate-pulse"
+                  className="absolute -bottom-6 -right-6 w-16 h-16 bg-[#FF521A]/20 rounded-full flex items-center justify-center text-primary animate-pulse"
                   style={{ animationDelay: "0.5s" }}
                 >
                   <svg
@@ -102,16 +115,16 @@ export default function Home() {
                     strokeLinejoin="round"
                     className="lucide lucide-gift"
                   >
-                    <polyline points="20 12 20 22 4 22 4 12" />
-                    <rect width="20" height="5" x="2" y="7" />
-                    <line x1="12" x2="12" y1="22" y2="7" />
-                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
-                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                    <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                    <rect width="20" height="5" x="2" y="7"></rect>
+                    <line x1="12" x2="12" y1="22" y2="7"></line>
+                    <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                    <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
                   </svg>
                 </div>
-                <div className="relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-xl p-8 w-[400px] h-[500px] flex flex-col">
+                <div className="relative bg-gradient-to-br from-[#FFCC00]/5 to-[#FF521A]/10 rounded-xl shadow-xl p-8 w-[400px] h-[500px] flex flex-col">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+                    <div className="w-12 h-12 rounded-full bg-gradient-orange flex items-center justify-center text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -124,9 +137,9 @@ export default function Home() {
                         strokeLinejoin="round"
                         className="lucide lucide-shopping-bag"
                       >
-                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                        <path d="M3 6h18" />
-                        <path d="M16 10a4 4 0 0 1-8 0" />
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
                       </svg>
                     </div>
                     <div className="ml-4">
@@ -134,16 +147,15 @@ export default function Home() {
                       <p className="text-sm text-muted-foreground">通过 ExinEarn 获得奖励</p>
                     </div>
                   </div>
-
                   <div className="space-y-4 flex-1">
                     <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
-                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                      <div className="w-10 h-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center text-primary mr-3">
                         1
                       </div>
                       <div>
                         <p className="font-medium">通过 ExinEarn 进入购物平台</p>
                         <div className="flex mt-2 space-x-2">
-                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                          <div className="w-8 h-8 bg-[#FFCC00]/10 rounded-md flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -156,12 +168,12 @@ export default function Home() {
                               strokeLinejoin="round"
                               className="text-primary"
                             >
-                              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                              <path d="M3 6h18" />
-                              <path d="M16 10a4 4 0 0 1-8 0" />
+                              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                              <path d="M3 6h18"></path>
+                              <path d="M16 10a4 4 0 0 1-8 0"></path>
                             </svg>
                           </div>
-                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                          <div className="w-8 h-8 bg-[#FFCC00]/10 rounded-md flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -174,13 +186,13 @@ export default function Home() {
                               strokeLinejoin="round"
                               className="text-primary"
                             >
-                              <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
-                              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-                              <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
-                              <path d="M2 7h20" />
+                              <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"></path>
+                              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                              <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path>
+                              <path d="M2 7h20"></path>
                             </svg>
                           </div>
-                          <div className="w-8 h-8 bg-orange-50 rounded-md flex items-center justify-center">
+                          <div className="w-8 h-8 bg-[#FFCC00]/10 rounded-md flex items-center justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -193,15 +205,14 @@ export default function Home() {
                               strokeLinejoin="round"
                               className="text-primary"
                             >
-                              <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
+                              <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path>
                             </svg>
                           </div>
                         </div>
                       </div>
                     </div>
-
                     <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
-                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                      <div className="w-10 h-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center text-primary mr-3">
                         2
                       </div>
                       <div>
@@ -211,9 +222,8 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-
                     <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
-                      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-primary mr-3">
+                      <div className="w-10 h-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center text-primary mr-3">
                         3
                       </div>
                       <div>
@@ -231,21 +241,20 @@ export default function Home() {
                             strokeLinejoin="round"
                             className="text-yellow-500 mr-1"
                           >
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                           </svg>
-                          <div className="text-sm bg-orange-50 text-primary px-2 py-1 rounded">+ 奖励金</div>
+                          <div className="text-sm bg-[#FFCC00]/10 text-primary px-2 py-1 rounded">+ 奖励金</div>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-6 bg-primary/10 p-3 rounded-lg">
+                  <div className="mt-6 bg-[#FFA500]/10 p-3 rounded-lg">
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-sm font-medium">累计奖励</p>
                         <p className="text-2xl font-bold text-primary">¥ 8,659.25</p>
                       </div>
-                      <div className="bg-primary text-white p-2 rounded-full">
+                      <div className="bg-gradient-orange text-white p-2 rounded-full">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -257,7 +266,7 @@ export default function Home() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         >
-                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                       </div>
                     </div>
@@ -280,40 +289,105 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+              {/* Feature cards */}
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
-                  <ShoppingCart className="h-6 w-6 text-primary" />
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-shopping-cart h-6 w-6 text-primary"
+                  >
+                    <circle cx="8" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold">多平台支持</h3>
                 <p className="text-center text-muted-foreground">
                   支持淘宝、京东、拼多多等多个主流购物平台，覆盖您的所有购物需求。
                 </p>
               </div>
+
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
-                  <Award className="h-6 w-6 text-primary" />
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-award h-6 w-6 text-primary"
+                  >
+                    <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                    <circle cx="12" cy="8" r="6"></circle>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold">持续奖励</h3>
                 <p className="text-center text-muted-foreground">
                   每次购物都能获得额外奖励，长期使用积少成多，累积可观收益。
                 </p>
               </div>
+
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
-                  <BarChart className="h-6 w-6 text-primary" />
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chart-no-axes-column-increasing h-6 w-6 text-primary"
+                  >
+                    <line x1="12" x2="12" y1="20" y2="10"></line>
+                    <line x1="18" x2="18" y1="20" y2="4"></line>
+                    <line x1="6" x2="6" y1="20" y2="16"></line>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold">数据透明</h3>
                 <p className="text-center text-muted-foreground">订单跟踪实时可见，奖励金额清晰透明，让您放心购物。</p>
               </div>
+
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
-                  <Gift className="h-6 w-6 text-primary" />
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-gift h-6 w-6 text-primary"
+                  >
+                    <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                    <path d="M12 8v13"></path>
+                    <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+                    <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold">专属优惠</h3>
                 <p className="text-center text-muted-foreground">独家优惠券和促销活动，为会员提供更多额外福利。</p>
               </div>
+
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -326,15 +400,30 @@ export default function Home() {
                     strokeLinejoin="round"
                     className="h-6 w-6 text-primary"
                   >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold">安全保障</h3>
                 <p className="text-center text-muted-foreground">严格的数据加密和隐私保护，确保您的账户和交易安全。</p>
               </div>
+
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-orange-100 p-3">
-                  <TrendingUp className="h-6 w-6 text-primary" />
+                <div className="rounded-full bg-[#FFCC00]/10 p-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-trending-up h-6 w-6 text-primary"
+                  >
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline>
+                  </svg>
                 </div>
                 <h3 className="text-xl font-bold">长期收益</h3>
                 <p className="text-center text-muted-foreground">
@@ -346,7 +435,7 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-orange-50">
+        <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-[#FFCC00]/5">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -358,31 +447,42 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-12">
               <div className="relative flex flex-col items-center space-y-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">1</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-orange text-white">
+                  1
+                </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-center">注册账号</h3>
                   <p className="text-center text-muted-foreground">免费注册 ExinEarn 水龙头账号，填写基本信息。</p>
                 </div>
-                <div className="absolute right-0 top-6 hidden h-0.5 w-full bg-primary lg:block lg:w-1/2"></div>
+                <div className="absolute right-0 top-6 hidden h-0.5 w-full bg-gradient-to-r from-[#FFCC00] to-[#FF521A] lg:block lg:w-1/2"></div>
               </div>
+
               <div className="relative flex flex-col items-center space-y-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">2</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-orange text-white">
+                  2
+                </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-center">浏览商品</h3>
                   <p className="text-center text-muted-foreground">通过 ExinEarn 水龙头进入您喜爱的购物平台。</p>
                 </div>
-                <div className="absolute left-0 right-0 top-6 hidden h-0.5 w-full bg-primary lg:block"></div>
+                <div className="absolute left-0 right-0 top-6 hidden h-0.5 w-full bg-gradient-to-r from-[#FFCC00] to-[#FF521A] lg:block"></div>
               </div>
+
               <div className="relative flex flex-col items-center space-y-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">3</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-orange text-white">
+                  3
+                </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-center">正常购物</h3>
                   <p className="text-center text-muted-foreground">像平常一样购物，价格与直接购买完全相同。</p>
                 </div>
-                <div className="absolute left-0 top-6 hidden h-0.5 w-1/2 bg-primary lg:block"></div>
+                <div className="absolute left-0 top-6 hidden h-0.5 w-1/2 bg-gradient-to-r from-[#FFCC00] to-[#FF521A] lg:block"></div>
               </div>
+
               <div className="flex flex-col items-center space-y-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white">4</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-orange text-white">
+                  4
+                </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-center">获取奖励</h3>
                   <p className="text-center text-muted-foreground">订单确认后，额外奖励自动到账，可随时提现。</p>
@@ -392,7 +492,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Platforms Section */}
+        {/* Supported Platforms Section */}
         <section id="platforms" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -404,7 +504,6 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4 mt-12">
-              {/* 淘宝 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#FF4400] rounded-lg flex items-center justify-center mx-auto">
@@ -428,8 +527,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">淘宝</h3>
               </div>
-
-              {/* 京东 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center mx-auto">
@@ -461,8 +558,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">京东</h3>
               </div>
-
-              {/* 拼多多 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#E22E1F] rounded-lg flex items-center justify-center mx-auto">
@@ -491,8 +586,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">拼多多</h3>
               </div>
-
-              {/* 天猫 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#FF0036] rounded-lg flex items-center justify-center mx-auto">
@@ -513,8 +606,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">天猫</h3>
               </div>
-
-              {/* 喜茶 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#1A1A1A] rounded-lg flex items-center justify-center mx-auto">
@@ -539,8 +630,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">喜茶</h3>
               </div>
-
-              {/* 星巴克 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#00704A] rounded-lg flex items-center justify-center mx-auto">
@@ -565,8 +654,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">星巴克</h3>
               </div>
-
-              {/* 瑞幸 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#0F1E36] rounded-lg flex items-center justify-center mx-auto">
@@ -591,8 +678,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">瑞幸</h3>
               </div>
-
-              {/* 饿了么 */}
               <div className="flex flex-col items-center space-y-4">
                 <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
                   <div className="w-20 h-20 bg-[#0095FF] rounded-lg flex items-center justify-center mx-auto">
@@ -617,38 +702,12 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold">饿了么</h3>
               </div>
-
-              {/* 美团 */}
-              <div className="flex flex-col items-center space-y-4">
-                <div className="rounded-lg border p-4 shadow-sm hover:border-primary transition-colors">
-                  <div className="w-20 h-20 bg-[#FFD100] rounded-lg flex items-center justify-center mx-auto">
-                    <svg
-                      viewBox="0 0 1024 1024"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                    >
-                      <path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#FFD100"></path>
-                      <path
-                        d="M512 307.2c-113.152 0-204.8 91.648-204.8 204.8s91.648 204.8 204.8 204.8 204.8-91.648 204.8-204.8-91.648-204.8-204.8-204.8z m0 358.4c-84.992 0-153.6-68.608-153.6-153.6s68.608-153.6 153.6-153.6 153.6 68.608 153.6 153.6-68.608 153.6-153.6 153.6z"
-                        fill="#2E2E2E"
-                      ></path>
-                      <path
-                        d="M512 409.6c-56.32 0-102.4 46.08-102.4 102.4s46.08 102.4 102.4 102.4 102.4-46.08 102.4-102.4-46.08-102.4-102.4-102.4z"
-                        fill="#2E2E2E"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold">美团</h3>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-orange-50">
+        {/* User Reviews Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#FFCC00]/5">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -662,9 +721,9 @@ export default function Home() {
               <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
+                    {[...Array(5)].map((_, i) => (
                       <svg
-                        key={star}
+                        key={i}
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -672,7 +731,7 @@ export default function Home() {
                         fill="currentColor"
                         className="h-5 w-5 text-yellow-400"
                       >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                       </svg>
                     ))}
                   </div>
@@ -681,7 +740,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                  <div className="h-10 w-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center">
                     <span className="text-primary font-bold">张</span>
                   </div>
                   <div>
@@ -693,9 +752,9 @@ export default function Home() {
               <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
+                    {[...Array(5)].map((_, i) => (
                       <svg
-                        key={star}
+                        key={i}
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -703,7 +762,7 @@ export default function Home() {
                         fill="currentColor"
                         className="h-5 w-5 text-yellow-400"
                       >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                       </svg>
                     ))}
                   </div>
@@ -712,7 +771,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                  <div className="h-10 w-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center">
                     <span className="text-primary font-bold">李</span>
                   </div>
                   <div>
@@ -724,9 +783,9 @@ export default function Home() {
               <div className="flex flex-col justify-between rounded-lg border bg-background p-6 shadow-sm">
                 <div className="space-y-4">
                   <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
+                    {[...Array(5)].map((_, i) => (
                       <svg
-                        key={star}
+                        key={i}
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -734,7 +793,7 @@ export default function Home() {
                         fill="currentColor"
                         className="h-5 w-5 text-yellow-400"
                       >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                       </svg>
                     ))}
                   </div>
@@ -743,7 +802,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center">
+                  <div className="h-10 w-10 rounded-full bg-[#FFA500]/10 flex items-center justify-center">
                     <span className="text-primary font-bold">王</span>
                   </div>
                   <div>
@@ -798,8 +857,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
+        {/* Call to Action Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-orange text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -809,12 +868,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg" className="bg-white text-primary hover:bg-orange-50">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md px-8 bg-white text-primary hover:bg-primary/5">
                   立即注册
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-orange-600">
+                </button>
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-11 rounded-md px-8 border-white text-white hover:bg-primary/90">
                   了解更多
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -824,7 +883,7 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex flex-col items-center md:items-start">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-              © 2023 ExinEarn 水龙头. 保留所有权利。
+              © 2023 ExinEarn 水龙头 深圳大眼鱼科技有限公司. 保留所有权利。
             </p>
             <a
               href="https://beian.miit.gov.cn/"
