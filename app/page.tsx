@@ -858,7 +858,7 @@ export default function HomePage() {
         </section>
 
         {/* Call to Action Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-orange text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-[#FFCC00] to-[#FF521A] text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -868,7 +868,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md px-8 bg-white text-primary hover:bg-primary/5">
+                <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md px-8 bg-gradient-orange text-white hover:bg-primary/90">
                   立即注册
                 </button>
                 <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-11 rounded-md px-8 border-white text-white hover:bg-primary/90">
@@ -883,7 +883,7 @@ export default function HomePage() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex flex-col items-center md:items-start">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-              © 2023 ExinEarn 水龙头 深圳大眼鱼科技有限公司. 保留所有权利。
+              © 2025 ExinEarn 水龙头 深圳大眼鱼科技有限公司. 保留所有权利。
             </p>
             <a
               href="https://beian.miit.gov.cn/"
