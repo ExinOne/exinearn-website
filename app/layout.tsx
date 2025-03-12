@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'ExinEarn 返利水龙头',
+  description: '购物获得额外奖励，积少成多收益丰',
+  generator: 'ExinEarn'
 }
 
 export default function RootLayout({
